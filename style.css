@@ -155,7 +155,7 @@ h1, h2, h3, h4 {
 /* Menu Section */
 .menu-section {
     padding: 4rem 1.5rem;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -180,15 +180,62 @@ h1, h2, h3, h4 {
 }
 
 .menu-category {
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.category-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--accent-color) 50%, transparent 100%);
+    margin: 1rem 0 2.5rem;
+    opacity: 0.5;
 }
 
 .category-title {
     font-size: 1.5rem;
     color: var(--accent-color);
-    margin-bottom: 1.5rem;
+    margin: 0;
+}
+
+/* Accordion */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: transparent;
+    border: none;
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding-bottom: 0.5rem;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.accordion-header:hover {
+    background-color: rgba(255,255,255,0.03);
+}
+
+.accordion-icon {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    font-weight: 300;
+    transition: transform 0.4s ease;
+    line-height: 1;
+}
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    padding: 0;
+}
+
+.accordion-panel.open {
+    padding-top: 1.5rem;
 }
 
 .menu-grid {

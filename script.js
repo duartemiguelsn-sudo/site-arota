@@ -1,28 +1,37 @@
 // Intersection Observer for scroll animations with stagger effect
 document.addEventListener('DOMContentLoaded', () => {
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
+    // Accordion Menu Logic
+    const headers = document.querySelectorAll('.accordion-header');
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                // Add staggered delay based on index for items appearing at the same time
-                setTimeout(() => {
-                    entry.target.classList.add('show');
-                }, index * 100); // 100ms delay per item
-                
-                // Unobserve after showing
-                observer.unobserve(entry.target);
+    headers.forEach(header => {
+        header.addEventListener('click', () => {
+            const panel = header.nextElementSibling;
+            const isOpen = header.classList.contains('active');
+
+            // Close all panels first
+            headers.forEach(h => {
+                h.classList.remove('active');
+                const p = h.nextElementSibling;
+                p.style.maxHeight = null;
+                p.classList.remove('open');
+            });
+
+            // If it wasn't already open, open the clicked one
+            if (!isOpen) {
+                header.classList.add('active');
+                panel.classList.add('open');
+                panel.style.maxHeight = panel.scrollHeight + 'px';
+
+                // Trigger stagger animation on cards inside this panel
+                const cards = panel.querySelectorAll('.stagger-anim');
+                cards.forEach((card, index) => {
+                    card.classList.remove('show');
+                    setTimeout(() => {
+                        card.classList.add('show');
+                    }, index * 80);
+                });
             }
         });
-    }, observerOptions);
-
-    const menuCards = document.querySelectorAll('.stagger-anim');
-    menuCards.forEach((card) => {
-        observer.observe(card);
     });
 
     // Mobile Menu Toggle
