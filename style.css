@@ -110,6 +110,62 @@ h1, h2, h3, h4 {
     box-shadow: 0 3px 10px rgba(212, 175, 55, 0.4);
 }
 
+/* Nav Actions (language + reservar) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-family: var(--font-body);
+}
+
+.lang-icon {
+    color: var(--text-secondary);
+    margin-right: 0.2rem;
+}
+
+.lang-option {
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    font-weight: 400;
+}
+
+.lang-option:hover {
+    color: var(--text-primary);
+}
+
+.lang-option.active {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.lang-divider {
+    color: rgba(255,255,255,0.2);
+    font-size: 0.7rem;
+}
+
+/* Sobre Nós Section */
+.about-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.about-text {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.9;
+    font-weight: 400;
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -162,7 +218,9 @@ h1, h2, h3, h4 {
 }
 
 .scroll-btn {
-    background: transparent;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
     padding: 0.8rem 2rem;
@@ -470,6 +528,14 @@ h1, h2, h3, h4 {
 
     .menu-toggle {
         display: block;
+    }
+
+    .lang-selector {
+        display: none;
+    }
+
+    .nav-actions {
+        gap: 0.8rem;
     }
 }
 
