@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Rota - Hamburgueria</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">A Rota</div>
+        <div class="nav-links">
+            <a href="#menu" class="nav-link">Menu</a>
+            <a href="#localizacao" class="nav-link">Localização</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">A Rota</h1>
+            <p class="hero-subtitle">Hamburgueria</p>
+            <button class="scroll-btn" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Ver Menu</button>
+        </div>
+    </header>
+
+    <!-- Digital Menu Section -->
+    <main id="menu" class="menu-section">
+        <h2 class="section-title">O Nosso Menu</h2>
+        
+        <div class="menu-container">
+            <!-- Entradas -->
+            <section class="menu-category">
+                <h3 class="category-title">Entradas</h3>
+                <div class="menu-grid">
+                    <article class="menu-card stagger-anim">
+                        <div class="menu-card-header">
+                            <h4 class="item-name">Bolo do Caco com manteiga de alho</h4>
+                            <span class="item-price">4,00€</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Rotas Premium -->
+            <section class="menu-category">
+                <h3 class="category-title">Rotas Premium</h3>
+                <div class="menu-grid">
+                    <article class="menu-card stagger-anim">
+                        <div class="menu-card-header">
+                            <h4 class="item-name">Rota de São Martinho do Porto</h4>
+                            <span class="item-price">12,50€</span>
+                        </div>
+                        <p class="item-description">Pão rústico, camarão crocante, bochecha estufada, alface e tomate</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Localização Section -->
+    <section id="localizacao" class="menu-section">
+        <h2 class="section-title">Localização</h2>
+        <p style="text-align: center; color: var(--text-secondary);">Rua da Hamburgueria, 123<br>Portugal</p>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="menu-section" style="padding-bottom: 4rem;">
+        <h2 class="section-title">Contacto</h2>
+        <p style="text-align: center; color: var(--text-secondary);">Email: reservas@arota.pt<br>Tel: 935070613</p>
+    </section>
+
+    <!-- Sticky Footer -->
+    <div class="sticky-footer">
+        <a href="tel:935070613" class="btn-primary">Reservar Mesa</a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
