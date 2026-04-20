@@ -529,6 +529,126 @@ h1, h2, h3, h4 {
     letter-spacing: 0.5px;
 }
 
+/* Sub-Footer (Legal Bar) */
+.sub-footer {
+    background-color: #080808;
+    border-top: 1px solid rgba(255,255,255,0.04);
+    padding: 2rem 2rem 1rem;
+    font-size: 11px;
+    color: #6b6b6b;
+    line-height: 1.6;
+}
+
+.sub-footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+@media (min-width: 768px) {
+    .sub-footer-content {
+        grid-template-columns: 1fr auto 1fr;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+}
+
+.sub-footer-col p {
+    margin: 0;
+}
+
+.sub-footer-center {
+    text-align: center;
+}
+
+.sub-footer-right {
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .sub-footer-right {
+        text-align: right;
+    }
+}
+
+.sub-footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.sub-footer a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.reclamacoes-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: rgba(255,255,255,0.06);
+    color: #999 !important;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    font-size: 11px;
+    transition: var(--transition-smooth);
+    white-space: nowrap;
+}
+
+.reclamacoes-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+}
+
+.reclamacoes-btn svg {
+    color: inherit;
+}
+
+/* Sub-Footer Bottom */
+.sub-footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 1rem;
+    font-size: 10px;
+    color: #555;
+}
+
+@media (min-width: 768px) {
+    .sub-footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.legal-links {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.legal-links a {
+    color: #555 !important;
+    font-size: 10px;
+}
+
+.legal-links a:hover {
+    color: var(--accent-color) !important;
+}
+
+.legal-sep {
+    color: rgba(255,255,255,0.1);
+    font-size: 10px;
+}
 
 
 /* Mobile Navbar & Responsive Enhancements */
