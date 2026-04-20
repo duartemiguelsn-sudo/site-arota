@@ -63,11 +63,18 @@ h1, h2, h3, h4 {
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--accent-color);
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .nav-link {
@@ -153,7 +160,7 @@ h1, h2, h3, h4 {
 
 /* Sobre Nós Section */
 .about-section {
-    padding: 5rem 2rem;
+    padding: 100px 2rem; /* 100px em cima e em baixo */
     text-align: center;
     max-width: 750px;
     margin: 0 auto;
@@ -164,6 +171,7 @@ h1, h2, h3, h4 {
     font-size: 1.1rem;
     line-height: 1.9;
     font-weight: 400;
+    margin: 0;
 }
 
 /* Hero Section */
@@ -187,6 +195,17 @@ h1, h2, h3, h4 {
     inset: 0;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 0;
+}
+
+.hero-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent 0%, var(--bg-color) 100%);
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* Fade in animation for Hero */
@@ -243,7 +262,7 @@ h1, h2, h3, h4 {
 
 /* Menu Section */
 .menu-section {
-    padding: 4rem 1.5rem;
+    padding: 4rem 1.5rem 0;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -653,37 +672,188 @@ h1, h2, h3, h4 {
 
 /* Mobile Navbar & Responsive Enhancements */
 @media (max-width: 768px) {
-    .nav-links {
+    .nav-right {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: rgba(18, 18, 18, 0.95);
+        background-color: rgba(18, 18, 18, 0.98);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         flex-direction: column;
-        padding: 1.5rem 0;
+        padding: 1.5rem 0 2rem;
         gap: 1.5rem;
         text-align: center;
         border-bottom: 1px solid rgba(255,255,255,0.1);
         box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     }
     
-    .nav-links.active {
+    .nav-right.active {
         display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+    }
+
+    .nav-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .lang-selector {
+        display: flex;
+        font-size: 0.85rem;
+        gap: 0.5rem;
+    }
+
+    .btn-reservar {
+        font-size: 1rem;
+        padding: 0.7rem 2rem;
+        width: 80%;
+        max-width: 280px;
+        text-align: center;
+        border-radius: 6px;
     }
 
     .menu-toggle {
         display: block;
     }
 
-    .lang-selector {
-        display: none;
+    /* Hero Mobile */
+    .hero {
+        height: 85vh;
+        min-height: 500px;
     }
 
-    .nav-actions {
-        gap: 0.8rem;
+    .hero-title {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+
+    .hero-subtitle {
+        font-size: clamp(1rem, 3vw, 1.4rem);
+        letter-spacing: 2px;
+    }
+
+    .scroll-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Menu Mobile */
+    .menu-section {
+        padding: 3rem 1rem 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .category-title {
+        font-size: 1.15rem;
+    }
+
+    .accordion-header {
+        padding: 1rem 0.3rem;
+        min-height: 56px;
+    }
+
+    .accordion-cat-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .menu-card {
+        padding: 1rem;
+    }
+
+    .menu-card-header {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+    }
+
+    .item-name {
+        font-size: 1.05rem;
+    }
+
+    .item-price {
+        font-size: 1rem;
+    }
+
+    .item-description {
+        font-size: 0.9rem;
+    }
+
+    /* Sobre Nós Mobile */
+    .about-section {
+        padding: 60px 1.5rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    /* Footer Mobile */
+    .footer-section {
+        padding: 3rem 1.5rem 0;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .footer-list li {
+        justify-content: center;
+    }
+
+    .hours-row {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .map-container iframe {
+        height: 200px;
+    }
+
+    /* Sub-Footer Mobile */
+    .sub-footer {
+        padding: 1.5rem 1rem 1rem;
+        text-align: center;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .category-title {
+        font-size: 1rem;
+    }
+
+    .accordion-title-group {
+        gap: 0.5rem;
+    }
+
+    .menu-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+
+    .about-section {
+        padding: 50px 1rem;
     }
 }
 

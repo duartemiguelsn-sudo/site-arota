@@ -36,18 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const navRight = document.querySelector('.nav-right');
     
-    if (menuToggle && navLinks) {
+    if (menuToggle && navRight) {
         menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            navRight.classList.toggle('active');
         });
         
         // Close menu when a link is clicked
         const links = document.querySelectorAll('.nav-link');
         links.forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+                navRight.classList.remove('active');
             });
         });
     }

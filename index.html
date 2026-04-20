@@ -15,24 +15,26 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="nav-brand">A Rota</div>
-        <div class="nav-links">
-            <a href="#menu" class="nav-link">Menu</a>
-            <a href="#sobre" class="nav-link">Sobre Nós</a>
-            <a href="#contacto" class="nav-link">Contacto</a>
-        </div>
-        <div class="nav-actions">
-            <div class="lang-selector">
-                <svg class="lang-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                <span class="lang-option active" data-lang="pt">PT</span>
-                <span class="lang-divider">|</span>
-                <span class="lang-option" data-lang="en">EN</span>
-                <span class="lang-divider">|</span>
-                <span class="lang-option" data-lang="fr">FR</span>
-                <span class="lang-divider">|</span>
-                <span class="lang-option" data-lang="es">ES</span>
+        <a href="#" class="nav-brand">A Rota</a>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#sobre-nos" class="nav-link">Sobre Nós</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
             </div>
-            <a href="tel:935070613" class="btn-reservar">Reservar</a>
+            <div class="nav-actions">
+                <div class="lang-selector">
+                    <svg class="lang-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="lang-option active" data-lang="pt">PT</span>
+                    <span class="lang-divider">|</span>
+                    <span class="lang-option" data-lang="en">EN</span>
+                    <span class="lang-divider">|</span>
+                    <span class="lang-option" data-lang="fr">FR</span>
+                    <span class="lang-divider">|</span>
+                    <span class="lang-option" data-lang="es">ES</span>
+                </div>
+                <a href="tel:935070613" class="btn-reservar">Reservar</a>
+            </div>
         </div>
         <button class="menu-toggle" aria-label="Toggle Menu">
             <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -47,13 +49,8 @@
             <p class="hero-subtitle">Hamburgueria</p>
             <button class="scroll-btn" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Ver Menu</button>
         </div>
+        <div class="hero-fade"></div>
     </header>
-
-    <!-- Sobre Nós Section -->
-    <section id="sobre" class="about-section">
-        <h2 class="section-title">Sobre Nós</h2>
-        <p class="about-text">Nascemos na Marginal de São Martinho do Porto com uma missão simples: elevar o hambúrguer artesanal. Combinamos os melhores ingredientes locais com a paixão pela grelha para criar rotas de sabor inesquecíveis.</p>
-    </section>
 
     <!-- Digital Menu Section -->
     <main id="menu" class="menu-section">
@@ -254,6 +251,12 @@
 
         </div>
     </main>
+
+    <!-- Sobre Nós Section -->
+    <section id="sobre-nos" class="about-section">
+        <h2 class="section-title">Sobre Nós</h2>
+        <p class="about-text">Nascemos na Marginal de São Martinho do Porto com uma missão simples: elevar o hambúrguer artesanal. Combinamos os melhores ingredientes locais com a paixão pela grelha para criar rotas de sabor inesquecíveis.</p>
+    </section>
 
     <!-- Footer Section -->
     <footer id="contacto" class="footer-section">
